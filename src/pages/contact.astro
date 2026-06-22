@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Contact" 
+  description="Contactez Vartista pour une urgence plomberie ou un devis gratuit à Bruxelles."
+>
+  <div class="page-header">
+    <div class="container text-center">
+      <h1>Contactez-nous</h1>
+      <p>Une équipe à votre écoute 24h/24 et 7j/7</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Nous sommes là pour vous aider</h2>
+          <p class="mb-4">
+            Que ce soit pour une urgence de plomberie, un débouchage ou une demande de devis, notre équipe est prête à intervenir rapidement partout à Bruxelles.
+          </p>
+
+          <div class="info-cards">
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3>Téléphone</h3>
+                <p>Urgence & Infos : <br/><strong><a href="tel:+32000000000">02 000 00 00</a></strong></p>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p>Pour vos devis : <br/><strong><a href="mailto:info@vartista.be">info@vartista.be</a></strong></p>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3>Heures d'ouverture</h3>
+                <p>Intervention : <strong>24/7</strong><br/>Bureau : Lun - Ven, 8h - 18h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper glass-card">
+          <h2>Demander un devis</h2>
+          <p class="mb-4">Remplissez le formulaire ci-dessous, nous vous répondrons dans les plus brefs délais.</p>
+          
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Merci pour votre message ! Nous vous contacterons très bientôt.');">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required placeholder="Votre nom" />
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Votre numéro" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Votre email" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service concerné</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Choisissez un service</option>
+                <option value="plomberie">Plomberie générale</option>
+                <option value="debouchage">Débouchage</option>
+                <option value="chauffage">Chauffage</option>
+                <option value="urgence">Urgence plomberie</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Description de votre demande</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Décrivez brièvement votre problème ou votre projet..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-full">
+              Envoyer la demande
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--bg-dark);
+    padding: 6rem 0 4rem;
+    color: white;
+  }
+
+  .page-header p {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  @media (min-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .mb-4 {
+    margin-bottom: 2rem;
+  }
+
+  .info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .info-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--accent);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .info-card p {
+    margin: 0;
+    color: var(--text-body);
+  }
+
+  .info-card a {
+    color: var(--primary);
+  }
+
+  .info-card a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-form-wrapper {
+    padding: 2.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .form-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: white;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  }
+
+  .w-full {
+    width: 100%;
+  }
+</style>

@@ -1,0 +1,254 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="À Propos" 
+  description="Découvrez Vartista, votre entreprise de plomberie de confiance à Bruxelles. Une équipe d'experts à votre service."
+>
+  <div class="page-header">
+    <div class="container text-center">
+      <h1>À Propos de Vartista</h1>
+      <p>L'excellence en plomberie à Bruxelles</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-image-box glass-card">
+            <img src="https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe Vartista" class="about-img" />
+          </div>
+          <div class="experience-badge glass-card">
+            <span class="years">15+</span>
+            <span class="text">Années<br/>d'expérience</span>
+          </div>
+        </div>
+        
+        <div class="about-content">
+          <span class="tag">Notre Histoire</span>
+          <h2>Une entreprise familiale au service des Bruxellois</h2>
+          <p class="lead">
+            Fondée avec la volonté d'offrir un service de plomberie transparent, rapide et de haute qualité, Vartista est devenue une référence à Bruxelles.
+          </p>
+          <p>
+            Notre équipe est composée de plombiers certifiés et passionnés par leur métier. Nous comprenons qu'un problème de plomberie peut perturber votre quotidien, c'est pourquoi nous mettons un point d'honneur à intervenir rapidement et à fournir des solutions durables.
+          </p>
+          
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>Fiabilité</h4>
+              <p>Des interventions garanties et un travail soigné.</p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h4>Réactivité</h4>
+              <p>Disponibles 24/7 pour vos urgences.</p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/><path d="M2 12h20"/><path d="m5 7 3 5-3 5"/><path d="m19 7-3 5 3 5"/></svg>
+              </div>
+              <h4>Expertise</h4>
+              <p>Des techniciens qualifiés et formés en continu.</p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><line x1="12" y1="1" x2="12" y2="23"/></svg>
+              </div>
+              <h4>Transparence</h4>
+              <p>Des devis clairs, sans frais cachés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container relative z-10 text-center">
+      <h2>Prêt à travailler avec nous ?</h2>
+      <p>Contactez-nous dès aujourd'hui pour discuter de vos besoins en plomberie.</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-secondary btn-lg">
+          Contactez-nous
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--bg-dark);
+    padding: 6rem 0 4rem;
+    color: white;
+  }
+
+  .page-header p {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (min-width: 992px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .about-image-wrapper {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+
+  .about-image-box {
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .about-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  .experience-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .experience-badge .years {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .experience-badge .text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .about-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content p {
+    margin-bottom: 2rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .value-item {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+
+  .value-item:hover {
+    background: var(--accent);
+    transform: translateY(-5px);
+  }
+
+  .value-icon {
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .value-item h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .value-item p {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    position: relative;
+    padding: 6rem 0;
+    color: white;
+    overflow: hidden;
+  }
+
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-dark);
+    background-image: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    z-index: 1;
+  }
+
+  .cta-section .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  .cta-section h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

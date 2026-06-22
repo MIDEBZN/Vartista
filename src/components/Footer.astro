@@ -1,0 +1,162 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <span class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.429 3.428a2.121 2.121 0 0 0 3-.001c.828-.828.828-2.171 0-3l-1.428-1.428a2.121 2.121 0 0 0-3 .001L13.571 8.43"/><path d="m14 8 2-2c.828-.828 2.171-.828 3 0l1.429 1.429c.828.828.828 2.171 0 3l-2 2"/><path d="m9.5 17.5 1.5-1.5"/><path d="m12 15 1.5-1.5"/></svg>
+          </span>
+          <span class="logo-text">Vartista</span>
+        </a>
+        <p class="footer-desc">
+          Votre partenaire de confiance pour tous vos travaux de plomberie et débouchage à Bruxelles. Service d'urgence 24/7.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services#plomberie">Plomberie Générale</a></li>
+          <li><a href="/services#debouchage">Débouchage</a></li>
+          <li><a href="/services#chauffage">Chauffage</a></li>
+          <li><a href="/services#urgence">Dépannage Urgence</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Entreprise</h3>
+        <ul>
+          <li><a href="/about">À Propos</a></li>
+          <li><a href="/locations">Zones d'intervention</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+32000000000">02 000 00 00</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:info@vartista.be">info@vartista.be</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Bruxelles et environs</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Vartista SRL. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding-top: 5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--bg-white);
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius);
+  }
+
+  .footer-desc {
+    color: #94a3b8;
+    max-width: 300px;
+  }
+
+  .footer-links h3, .footer-contact h3 {
+    color: var(--bg-white);
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-links a {
+    color: #94a3b8;
+    transition: var(--transition);
+  }
+
+  .footer-links a:hover {
+    color: var(--primary-light);
+    padding-left: 0.25rem;
+  }
+
+  .footer-contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .footer-contact a {
+    color: #94a3b8;
+  }
+
+  .footer-contact a:hover {
+    color: var(--primary-light);
+  }
+
+  .footer-contact svg {
+    color: var(--primary-light);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #334155;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.875rem;
+  }
+</style>
